@@ -35,4 +35,3 @@ const elem2 = document.querySelector('img')
 console.log(elem2.getAttribute('src'));
 elem2.setAttribute('src', 'https://placehold.it/400x200')
 
-
