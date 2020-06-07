@@ -1,4 +1,4 @@
-window.alert()
+window.alert('これはwindow.alert()で表示したアラートです')
 
 
 console.log(document.doctype)
@@ -35,3 +35,24 @@ const elem2 = document.querySelector('img')
 console.log(elem2.getAttribute('src'));
 elem2.setAttribute('src', 'https://placehold.it/400x200')
 
+const list = document.querySelector('.list')
+const newItem = document.createElement('li')
+newItem.textContent = '新しいアイテム'
+
+
+list.appendChild(newItem)
+
+list.removeChild(list.firstChild)
+
+const addButton = document.getElementById('add')
+const removeButton = document.getElementById('remove')
+const list = document.querySelector('.list')
+
+addButton.addEventListener('click', (event) => {
+    const newItem = document.createElement('li')
+    newItem.textContent = '新しいアイテム'
+    list.appendChild(newItem)
+})
+removeButton.addEventListener('click', (event) => {
+    list.removeChild(list.lastElementChild)
+})
